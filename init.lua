@@ -15,6 +15,7 @@ hs.hotkey.bind(hyper, 'right', function()
     local center = hs.geometry.rectMidPoint(rect)
  
     hs.mouse.absolutePosition(center)
+    hs.eventtap.leftClick(center, 100)
 end)
 
 -- Move Mouse to center of previous Monitor
@@ -30,6 +31,7 @@ hs.hotkey.bind(hyper, 'left', function()
     local center = hs.geometry.rectMidPoint(rect)
  
     hs.mouse.absolutePosition(center)
+    hs.eventtap.leftClick(center, 100)
 end)
 
 
