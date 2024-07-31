@@ -90,3 +90,36 @@ hs.hotkey.bind(hyper2, 'down', function()
 
     w:setFullScreen(false)
 end)
+
+local hyper3 = {'alter', 'cmd'}
+
+hs.hotkey.bind(hyper3, 'left', function() 
+    moveTo({0, 0, 0.5, 1}) 
+end)
+
+hs.hotkey.bind(hyper3, 'right', function() 
+    moveTo({0.5, 0, 0.5, 1}) 
+end)
+
+hs.hotkey.bind(hyper3, 'up', function() 
+    moveTo({0, 0, 1, 0.5}) 
+end)
+
+hs.hotkey.bind(hyper3, 'down', function() 
+    moveTo({0, 0.5, 1, 0.5}) 
+end)
+
+-- move window to target pos
+function moveTo(pos) 
+    local w = hs.window.focusedWindow()
+    if not w then 
+        return
+    end
+
+    local isFullScreen = w:isFullScreen()
+    if isFullScreen then
+        w:setFullScreen(false)
+    end
+
+    w:moveToUnit(pos)
+end
