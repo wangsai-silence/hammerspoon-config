@@ -11,5 +11,6 @@ hammerspoon 配置脚本
 - Ctrl + Cmd + &rarr; : 窗口移动到右侧屏幕
 - Ctrl + Cmd + &uarr; : 窗口最大化
 - Ctrl + Cmd + &darr; : 窗口退出最大化
-
+- Option + Cmd + &larr; : 窗口移到屏幕左半部分
+- Option + Cmd + &rarr; : 窗口移到屏幕右半部分
 
