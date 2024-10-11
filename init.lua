@@ -84,14 +84,18 @@ hs.hotkey.bind(hyper2, 'down', function()
     end
 
     local isFullScreen = w:isFullScreen()
-    if not isFullScreen then
-        return
+    if isFullScreen then
+        w:setFullScreen(false)
     end
 
-    w:setFullScreen(false)
+    w:moveToUnit({0.2, 0.2, 0.6, 0.6})
+    -- if not isFullScreen then
+    --     return
+    -- end
+
 end)
 
-local hyper3 = {'alter', 'cmd'}
+local hyper3 = {'shift', 'alter', 'cmd'}
 
 hs.hotkey.bind(hyper3, 'left', function() 
     moveTo({0, 0, 0.5, 1}) 
